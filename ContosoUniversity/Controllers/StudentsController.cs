@@ -18,7 +18,10 @@ namespace ContosoUniversity.Controllers
         // GET: Students
         public ActionResult Index()
         {
-            return View(db.Students.ToList());
+            Console.WriteLine("we reached Index command");
+            var students = db.Students.ToList();
+            Console.WriteLine(students);
+            return View(students);
         }
 
         // GET: Students/Details/5
